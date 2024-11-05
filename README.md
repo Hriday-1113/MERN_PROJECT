@@ -1,71 +1,138 @@
-# Hotel Booking App
+Hotel Booking Application
 
-## Overview
+Welcome to the Hotel Booking Application! This application enables users to book hotels in multiple cities, manage bookings, and view hotel details with ease. Built with the MERN stack, this app offers a responsive, dynamic user interface along with a secure, scalable backend.
+Table of Contents
 
-This is a MERN stack application designed to facilitate hotel bookings in three popular European cities: **London**, **Madrid**, and **Berlin**. The app allows users to browse available hotels, register/login to manage bookings, and sort options by price and other criteria for easy navigation.
+    Objective
+    Features
+    Tech Stack Used
+    Project Structure
+    Getting Started
+    Usage
+    Future Scope
+    Contributors
 
-## Features
+Objective
 
-- **User Authentication**: Secure login and registration for personalized experiences.
-- **Hotel Search & Booking**: Search hotels in London, Madrid, or Berlin, and book rooms directly.
-- **Price Sorting**: Sort hotel listings by price to quickly find options within a budget.
-- **User-Friendly Interface**: Responsive design optimized for various devices.
+The objective of this application is to provide a convenient and user-friendly platform for booking hotel rooms across multiple cities, allowing users to browse, search, and sort hotels according to their preferences.
+Features
 
-## Tech Stack
+    User Authentication: Secure registration, login, and JWT-based authentication.
+    Hotel Search: Browse hotels in London, Madrid, and Berlin.
+    Room Booking: View room details and availability, and book rooms.
+    Sorting and Filtering: Sort by price, filter by room type, and more.
+    Responsive Design: Accessible on desktops, tablets, and mobile devices.
+    Booking History: Users can view and manage past bookings.
 
-- **Frontend**: React, with CSS for styling
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB for data storage
-- **Authentication**: JSON Web Tokens (JWT) for secure user authentication
+Tech Stack Used
+Frontend
 
-## Installation
+    React: For building the UI with reusable components.
+    CSS: For responsive and visually appealing design.
 
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-   cd booking-app
+Backend
 
-    Install dependencies:
+    Node.js and Express: To create a secure, fast, and RESTful API.
+    MongoDB: For storing user, hotel, and booking data, managed with Mongoose for schema validation and data consistency.
 
-    bash
+Project Structure
 
-npm install
-cd client
-npm install
+    /api: Contains the backend code, including routes, models, and controllers.
+        models: Defines the data structure for users, hotels, and rooms.
+        controllers: Contains the logic for handling API requests.
+        routes: Defines routes for user, hotel, and booking functionalities.
 
-Set up environment variables: Create a .env file in the root and add the following:
+    /client: Contains the frontend code built with React, including components, pages, and assets.
 
-plaintext
+Getting Started
 
-MONGODB_URI=<your-mongodb-uri>
-JWT_SECRET=<your-secret-key>
-
-Run the application:
-
-    Start the server:
-
-    bash
-
-npm run dev
-
-Start the client:
+Follow these steps to set up the project locally:
+1. Clone the Repository
 
 bash
 
-        cd client
-        npm start
+git clone <repository-url>
 
-    Access the application at http://localhost:3000.
+2. Navigate to the Project Directory
+
+bash
+
+cd <project-folder>
+
+3. Set Up the Backend
+
+    Navigate to the api directory:
+
+    bash
+
+cd api
+
+Install backend dependencies:
+
+bash
+
+npm install
+
+Set up environment variables (e.g., MongoDB connection string, JWT secret) in an .env file in the api directory:
+
+plaintext
+
+MONGODB_URI=your-mongodb-connection-string
+JWT_SECRET=your-jwt-secret
+
+Start the backend server:
+
+bash
+
+    npm start
+
+    The server will start on http://localhost:5000 (or the specified port in your environment variables).
+
+4. Set Up the Frontend
+
+    Navigate to the client directory:
+
+    bash
+
+cd ../client
+
+Install frontend dependencies:
+
+bash
+
+npm install
+
+Start the frontend server:
+
+bash
+
+    npm start
+
+    The client application will start on http://localhost:3000.
 
 Usage
 
-    Login/Register: Create an account or log in to manage your bookings.
-    Browse Hotels: Choose from a variety of hotels in London, Madrid, and Berlin.
-    Book Rooms: Select your desired room and confirm the booking.
-    Sort Options: Sort hotels by price to find suitable options.
+Once the servers are running, you can start using the app:
 
-Future Enhancements
+    Open the client in your browser: http://localhost:3000.
+    Register and Login to access the application’s features.
+    Browse Hotels by selecting a city (London, Madrid, Berlin).
+    View Room Details and Book a Room as per your needs.
+    Use the Sort and Filter options to refine your search by price, rating, and room type.
+    Check Your Bookings under the user profile to view your booking history.
 
-    Additional cities and hotels.
-    User reviews and ratings for each hotel.
-    Enhanced sorting and filtering options.
+Future Scope
+
+This application is designed with scalability in mind, allowing for the following future enhancements:
+
+    Additional Cities: Add more cities to expand hotel booking options.
+    User Reviews and Ratings: Implement a review system for users to rate their experiences.
+    Payment Integration: Allow users to pay for bookings directly through the app.
+    Admin Dashboard: Create a dashboard for hotel owners to manage listings and view bookings.
+    Recommendation System: Suggest hotels based on user preferences and booking history.
+
+Contributors
+Work Distribution
+
+    Mayur: Frontend design and implementation using React, JSX, CSS, and API integration for connecting to the backend.
+    Hriday: Backend development with Node.js, Express, and MongoDB, implementing secure authentication, data modeling, and the main API endpoints.
